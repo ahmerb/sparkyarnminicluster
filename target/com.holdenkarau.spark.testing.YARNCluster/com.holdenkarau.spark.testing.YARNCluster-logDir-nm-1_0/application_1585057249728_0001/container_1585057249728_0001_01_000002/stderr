@@ -1,0 +1,174 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/ahmer/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-log4j12/1.7.16/54c6dd23a7c420e40b8848e962d5f2a3534260af/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/ahmer/code/sparkyarnminicluster/target/com.holdenkarau.spark.testing.YARNCluster/com.holdenkarau.spark.testing.YARNCluster-localDir-nm-1_0/filecache/83/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/03/24 13:41:17 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 70684@ahmer-C02XR87MJGH6
+20/03/24 13:41:17 INFO SignalUtils: Registered signal handler for TERM
+20/03/24 13:41:17 INFO SignalUtils: Registered signal handler for HUP
+20/03/24 13:41:17 INFO SignalUtils: Registered signal handler for INT
+20/03/24 13:41:18 DEBUG Shell: Failed to detect a valid hadoop home directory
+java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset.
+	at org.apache.hadoop.util.Shell.checkHadoopHomeInner(Shell.java:448)
+	at org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:419)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:496)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.yarn.conf.YarnConfiguration.<clinit>(YarnConfiguration.java:692)
+	at org.apache.spark.deploy.yarn.YarnSparkHadoopUtil.newConfiguration(YarnSparkHadoopUtil.scala:64)
+	at org.apache.spark.deploy.SparkHadoopUtil.<init>(SparkHadoopUtil.scala:50)
+	at org.apache.spark.deploy.yarn.YarnSparkHadoopUtil.<init>(YarnSparkHadoopUtil.scala:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at org.apache.spark.deploy.SparkHadoopUtil$.liftedTree1$1(SparkHadoopUtil.scala:387)
+	at org.apache.spark.deploy.SparkHadoopUtil$.yarn$lzycompute(SparkHadoopUtil.scala:385)
+	at org.apache.spark.deploy.SparkHadoopUtil$.yarn(SparkHadoopUtil.scala:385)
+	at org.apache.spark.deploy.SparkHadoopUtil$.get(SparkHadoopUtil.scala:410)
+	at org.apache.spark.executor.CoarseGrainedExecutorBackend$.run(CoarseGrainedExecutorBackend.scala:188)
+	at org.apache.spark.executor.CoarseGrainedExecutorBackend$.main(CoarseGrainedExecutorBackend.scala:284)
+	at org.apache.spark.executor.CoarseGrainedExecutorBackend.main(CoarseGrainedExecutorBackend.scala)
+20/03/24 13:41:18 DEBUG Shell: setsid is not available on this machine. So not using it.
+20/03/24 13:41:18 DEBUG Shell: setsid exited with exit code 0
+20/03/24 13:41:18 DEBUG MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, about=, type=DEFAULT, valueName=Time, value=[Rate of successful kerberos logins and latency (milliseconds)])
+20/03/24 13:41:18 DEBUG MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, about=, type=DEFAULT, valueName=Time, value=[Rate of failed kerberos logins and latency (milliseconds)])
+20/03/24 13:41:18 DEBUG MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, about=, type=DEFAULT, valueName=Time, value=[GetGroups])
+20/03/24 13:41:18 DEBUG MutableMetricsFactory: field private org.apache.hadoop.metrics2.lib.MutableGaugeLong org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailuresTotal with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, about=, type=DEFAULT, valueName=Time, value=[Renewal failures since startup])
+20/03/24 13:41:18 DEBUG MutableMetricsFactory: field private org.apache.hadoop.metrics2.lib.MutableGaugeInt org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailures with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, about=, type=DEFAULT, valueName=Time, value=[Renewal failures since last successful login])
+20/03/24 13:41:18 DEBUG MetricsSystemImpl: UgiMetrics, User and group related metrics
+20/03/24 13:41:18 DEBUG KerberosName: Kerberos krb5 configuration not found, setting default realm to empty
+20/03/24 13:41:18 DEBUG Groups:  Creating new Groups object
+20/03/24 13:41:18 DEBUG NativeCodeLoader: Trying to load the custom-built native-hadoop library...
+20/03/24 13:41:18 DEBUG NativeCodeLoader: Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+20/03/24 13:41:18 DEBUG NativeCodeLoader: java.library.path=/home//Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+20/03/24 13:41:18 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+20/03/24 13:41:18 DEBUG PerformanceAdvisory: Falling back to shell based
+20/03/24 13:41:18 DEBUG JniBasedUnixGroupsMappingWithFallback: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+20/03/24 13:41:18 DEBUG Groups: Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+20/03/24 13:41:18 DEBUG YarnSparkHadoopUtil: running as user: ahmer
+20/03/24 13:41:18 DEBUG UserGroupInformation: hadoop login
+20/03/24 13:41:18 DEBUG UserGroupInformation: hadoop login commit
+20/03/24 13:41:18 DEBUG UserGroupInformation: using local user:UnixPrincipal: ahmer
+20/03/24 13:41:18 DEBUG UserGroupInformation: Using user: "UnixPrincipal: ahmer" with name ahmer
+20/03/24 13:41:18 DEBUG UserGroupInformation: User entry: "ahmer"
+20/03/24 13:41:18 DEBUG UserGroupInformation: Assuming keytab is managed externally since logged in from subject.
+20/03/24 13:41:18 DEBUG UserGroupInformation: Reading credentials from location set in HADOOP_TOKEN_FILE_LOCATION: /Users/ahmer/code/sparkyarnminicluster/target/com.holdenkarau.spark.testing.YARNCluster/com.holdenkarau.spark.testing.YARNCluster-localDir-nm-1_0/usercache/ahmer/appcache/application_1585057249728_0001/container_1585057249728_0001_01_000002/container_tokens
+20/03/24 13:41:18 DEBUG UserGroupInformation: Loaded 1 tokens
+20/03/24 13:41:18 DEBUG UserGroupInformation: UGI loginUser:ahmer (auth:SIMPLE)
+20/03/24 13:41:18 DEBUG UserGroupInformation: PrivilegedAction as:ahmer (auth:SIMPLE) from:org.apache.spark.deploy.SparkHadoopUtil.runAsSparkUser(SparkHadoopUtil.scala:66)
+20/03/24 13:41:18 INFO SecurityManager: Changing view acls to: ahmer
+20/03/24 13:41:18 INFO SecurityManager: Changing modify acls to: ahmer
+20/03/24 13:41:18 INFO SecurityManager: Changing view acls groups to: 
+20/03/24 13:41:18 INFO SecurityManager: Changing modify acls groups to: 
+20/03/24 13:41:18 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ahmer); groups with view permissions: Set(); users  with modify permissions: Set(ahmer); groups with modify permissions: Set()
+20/03/24 13:41:18 DEBUG SecurityManager: Created SSL options for fs: SSLOptions{enabled=false, keyStore=None, keyStorePassword=None, trustStore=None, trustStorePassword=None, protocol=None, enabledAlgorithms=Set()}
+20/03/24 13:41:18 DEBUG InternalLoggerFactory: Using SLF4J as the default logging framework
+20/03/24 13:41:18 DEBUG PlatformDependent0: java.nio.Buffer.address: available
+20/03/24 13:41:18 DEBUG PlatformDependent0: sun.misc.Unsafe.theUnsafe: available
+20/03/24 13:41:18 DEBUG PlatformDependent0: sun.misc.Unsafe.copyMemory: available
+20/03/24 13:41:18 DEBUG PlatformDependent0: direct buffer constructor: available
+20/03/24 13:41:18 DEBUG PlatformDependent0: java.nio.Bits.unaligned: available, true
+20/03/24 13:41:18 DEBUG PlatformDependent0: java.nio.DirectByteBuffer.<init>(long, int): available
+20/03/24 13:41:18 DEBUG Cleaner0: java.nio.ByteBuffer.cleaner(): available
+20/03/24 13:41:18 DEBUG PlatformDependent: Java version: 8
+20/03/24 13:41:18 DEBUG PlatformDependent: -Dio.netty.noUnsafe: false
+20/03/24 13:41:18 DEBUG PlatformDependent: sun.misc.Unsafe: available
+20/03/24 13:41:18 DEBUG PlatformDependent: -Dio.netty.noJavassist: false
+20/03/24 13:41:18 DEBUG PlatformDependent: Javassist: available
+20/03/24 13:41:18 DEBUG PlatformDependent: -Dio.netty.tmpdir: /Users/ahmer/code/sparkyarnminicluster/target/com.holdenkarau.spark.testing.YARNCluster/com.holdenkarau.spark.testing.YARNCluster-localDir-nm-1_0/usercache/ahmer/appcache/application_1585057249728_0001/container_1585057249728_0001_01_000002/tmp (java.io.tmpdir)
+20/03/24 13:41:18 DEBUG PlatformDependent: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+20/03/24 13:41:18 DEBUG PlatformDependent: -Dio.netty.noPreferDirect: false
+20/03/24 13:41:18 DEBUG PlatformDependent: io.netty.maxDirectMemory: 0 bytes
+20/03/24 13:41:18 DEBUG JavassistTypeParameterMatcherGenerator: Generated: io.netty.util.internal.__matchers__.org.apache.spark.network.protocol.MessageMatcher
+20/03/24 13:41:18 DEBUG JavassistTypeParameterMatcherGenerator: Generated: io.netty.util.internal.__matchers__.io.netty.buffer.ByteBufMatcher
+20/03/24 13:41:18 DEBUG MultithreadEventLoopGroup: -Dio.netty.eventLoopThreads: 24
+20/03/24 13:41:18 DEBUG NioEventLoop: -Dio.netty.noKeySetOptimization: false
+20/03/24 13:41:18 DEBUG NioEventLoop: -Dio.netty.selectorAutoRebuildThreshold: 512
+20/03/24 13:41:18 DEBUG PlatformDependent: org.jctools-core.MpscChunkedArrayQueue: available
+20/03/24 13:41:18 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.numHeapArenas: 9
+20/03/24 13:41:18 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.numDirectArenas: 9
+20/03/24 13:41:18 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.pageSize: 8192
+20/03/24 13:41:18 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.maxOrder: 11
+20/03/24 13:41:18 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.chunkSize: 16777216
+20/03/24 13:41:18 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.tinyCacheSize: 512
+20/03/24 13:41:18 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.smallCacheSize: 256
+20/03/24 13:41:18 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.normalCacheSize: 64
+20/03/24 13:41:18 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+20/03/24 13:41:18 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.cacheTrimInterval: 8192
+20/03/24 13:41:18 DEBUG TransportClientFactory: Creating new connection to /127.0.0.1:59684
+20/03/24 13:41:18 DEBUG ThreadLocalRandom: -Dio.netty.initialSeedUniquifier: 0x8d1b5d41b5ed701d (took 0 ms)
+20/03/24 13:41:18 DEBUG ByteBufUtil: -Dio.netty.allocator.type: unpooled
+20/03/24 13:41:18 DEBUG ByteBufUtil: -Dio.netty.threadLocalDirectBufferSize: 65536
+20/03/24 13:41:18 DEBUG ByteBufUtil: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+20/03/24 13:41:18 DEBUG AbstractByteBuf: -Dio.netty.buffer.bytebuf.checkAccessible: true
+20/03/24 13:41:19 DEBUG ResourceLeakDetector: -Dio.netty.leakDetection.level: simple
+20/03/24 13:41:19 DEBUG ResourceLeakDetector: -Dio.netty.leakDetection.maxRecords: 4
+20/03/24 13:41:19 DEBUG ResourceLeakDetectorFactory: Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@67dbd200
+20/03/24 13:41:19 DEBUG TransportClientFactory: Connection to /127.0.0.1:59684 successful, running bootstraps...
+20/03/24 13:41:19 INFO TransportClientFactory: Successfully created connection to /127.0.0.1:59684 after 45 ms (0 ms spent in bootstraps)
+20/03/24 13:41:19 DEBUG Recycler: -Dio.netty.recycler.maxCapacity.default: 32768
+20/03/24 13:41:19 DEBUG Recycler: -Dio.netty.recycler.maxSharedCapacityFactor: 2
+20/03/24 13:41:19 DEBUG Recycler: -Dio.netty.recycler.linkCapacity: 16
+20/03/24 13:41:19 DEBUG Recycler: -Dio.netty.recycler.ratio: 8
+20/03/24 13:41:19 INFO SecurityManager: Changing view acls to: ahmer
+20/03/24 13:41:19 INFO SecurityManager: Changing modify acls to: ahmer
+20/03/24 13:41:19 INFO SecurityManager: Changing view acls groups to: 
+20/03/24 13:41:19 INFO SecurityManager: Changing modify acls groups to: 
+20/03/24 13:41:19 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ahmer); groups with view permissions: Set(); users  with modify permissions: Set(ahmer); groups with modify permissions: Set()
+20/03/24 13:41:19 DEBUG SecurityManager: Created SSL options for fs: SSLOptions{enabled=false, keyStore=None, keyStorePassword=None, trustStore=None, trustStorePassword=None, protocol=None, enabledAlgorithms=Set()}
+20/03/24 13:41:19 DEBUG SparkEnv: Using serializer: class org.apache.spark.serializer.JavaSerializer
+20/03/24 13:41:19 DEBUG TransportClientFactory: Creating new connection to /127.0.0.1:59684
+20/03/24 13:41:19 DEBUG TransportClientFactory: Connection to /127.0.0.1:59684 successful, running bootstraps...
+20/03/24 13:41:19 INFO TransportClientFactory: Successfully created connection to /127.0.0.1:59684 after 1 ms (0 ms spent in bootstraps)
+20/03/24 13:41:19 INFO DiskBlockManager: Created local directory at /Users/ahmer/code/sparkyarnminicluster/target/com.holdenkarau.spark.testing.YARNCluster/com.holdenkarau.spark.testing.YARNCluster-localDir-nm-1_0/usercache/ahmer/appcache/application_1585057249728_0001/blockmgr-2103466b-a823-4edc-b799-a3bf91e27798
+20/03/24 13:41:19 DEBUG DiskBlockManager: Adding shutdown hook
+20/03/24 13:41:19 DEBUG ShutdownHookManager: Adding shutdown hook
+20/03/24 13:41:19 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/03/24 13:41:19 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@127.0.0.1:59684
+20/03/24 13:41:19 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/03/24 13:41:19 INFO Executor: Starting executor ID 1 on host localhost
+20/03/24 13:41:19 DEBUG NetUtil: Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1%lo0)
+20/03/24 13:41:19 DEBUG NetUtil: /proc/sys/net/core/somaxconn: 128 (non-existent)
+20/03/24 13:41:19 DEBUG TransportServer: Shuffle server started on port: 59702
+20/03/24 13:41:19 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 59702.
+20/03/24 13:41:19 INFO NettyBlockTransferService: Server created on localhost:59702
+20/03/24 13:41:19 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/03/24 13:41:19 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(1, localhost, 59702, None)
+20/03/24 13:41:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(1, localhost, 59702, None)
+20/03/24 13:41:19 INFO BlockManager: Initialized BlockManager: BlockManagerId(1, localhost, 59702, None)
+20/03/24 13:41:19 INFO CoarseGrainedExecutorBackend: Got assigned task 0
+20/03/24 13:41:19 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/03/24 13:41:19 DEBUG Executor: Task 0's epoch is 0
+20/03/24 13:41:19 DEBUG BlockManager: Getting local block broadcast_0
+20/03/24 13:41:19 DEBUG BlockManager: Block broadcast_0 was not found
+20/03/24 13:41:19 INFO TorrentBroadcast: Started reading broadcast variable 0
+20/03/24 13:41:19 DEBUG TorrentBroadcast: Reading piece broadcast_0_piece0 of broadcast_0
+20/03/24 13:41:19 DEBUG BlockManager: Getting local block broadcast_0_piece0 as bytes
+20/03/24 13:41:19 DEBUG BlockManager: Getting remote block broadcast_0_piece0
+20/03/24 13:41:19 DEBUG BlockManager: Getting remote block broadcast_0_piece0 from BlockManagerId(driver, 127.0.0.1, 59698, None)
+20/03/24 13:41:19 DEBUG TransportClientFactory: Creating new connection to /127.0.0.1:59698
+20/03/24 13:41:19 DEBUG TransportClientFactory: Connection to /127.0.0.1:59698 successful, running bootstraps...
+20/03/24 13:41:19 INFO TransportClientFactory: Successfully created connection to /127.0.0.1:59698 after 1 ms (0 ms spent in bootstraps)
+20/03/24 13:41:19 DEBUG TransportClient: Sending fetch chunk request 0 to /127.0.0.1:59698
+20/03/24 13:41:19 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 1006.0 B, free 366.3 MB)
+20/03/24 13:41:20 DEBUG BlockManagerMaster: Updated info of block broadcast_0_piece0
+20/03/24 13:41:20 DEBUG BlockManager: Told master about block broadcast_0_piece0
+20/03/24 13:41:20 DEBUG BlockManager: Put block broadcast_0_piece0 locally took  10 ms
+20/03/24 13:41:20 DEBUG BlockManager: Putting block broadcast_0_piece0 without replication took  11 ms
+20/03/24 13:41:20 INFO TorrentBroadcast: Reading broadcast variable 0 took 86 ms
+20/03/24 13:41:20 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 1448.0 B, free 366.3 MB)
+20/03/24 13:41:20 DEBUG BlockManager: Put block broadcast_0 locally took  57 ms
+20/03/24 13:41:20 DEBUG BlockManager: Putting block broadcast_0 without replication took  57 ms
+20/03/24 13:41:20 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1865 bytes result sent to driver
+20/03/24 13:41:20 INFO CoarseGrainedExecutorBackend: Got assigned task 1
+20/03/24 13:41:20 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+20/03/24 13:41:20 DEBUG Executor: Task 1's epoch is 0
+20/03/24 13:41:20 DEBUG BlockManager: Getting local block broadcast_0
+20/03/24 13:41:20 DEBUG BlockManager: Level for block broadcast_0 is StorageLevel(disk, memory, deserialized, 1 replicas)
+20/03/24 13:41:20 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 963 bytes result sent to driver
+20/03/24 13:41:20 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+20/03/24 13:41:20 INFO MemoryStore: MemoryStore cleared
+20/03/24 13:41:20 INFO BlockManager: BlockManager stopped
+20/03/24 13:41:20 INFO ShutdownHookManager: Shutdown hook called
+20/03/24 13:41:20 DEBUG ShutdownHookManager: ShutdownHookManger complete shutdown.
