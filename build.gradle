@@ -13,7 +13,7 @@ plugins {
     // id 'com.github.johnrengelman.shadow' version '1.2.3'
 }
 
-mainClassName='sparkyarnminicluster.HelloSpark'
+mainClassName='sparkyarnminicluster.WordCount'
 
 repositories {
     // Use jcenter for resolving dependencies.
